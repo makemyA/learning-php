@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 
 <?php 
+//genre
+$female= "absente";
+$male="absent";
+
+//classe de
+$classe_1= "Madame Chiffre";
+$classe_2= "Madame Lettre";
+$classe_3= "Madame Arnould";
+$classe_4= "Madame Poutou";
+$classe_5= "Madame Kaboum";
+
+
 
 //excuse1
 $maladie_1= "gros rhume";
@@ -49,12 +61,30 @@ shuffle($other);
 <form method="post" >
 
     <fieldset>
-        <legend>Saisissez le nom de l'enfant</legend>
+        <legend>Informations sur l'enfant</legend>
         <div>
            <!-- <form action=""> -->
-           <label for="GET-name"></label>
+           <label for="GET-name">prénom et nom de l'enfant</label>
            <input type="text" id="GET-name" name="name">
            
+        </div>
+        <div>
+            <label for="get-genre">sexe</label>
+            <select name="genre" id="get-genre">
+                <option value="<?php echo $male?>">H</option>
+                <option value="<?php echo $female?>">F</option>
+            </select>
+        <div>
+            <label for="get-professeur">Classe de</label>
+            <select name="classe" id="get-professeur">
+                <option value="<?php echo $classe_1 ?>"><?php echo $classe_1 ?></option>
+                <option value="<?php echo $classe_2 ?>"><?php echo $classe_2 ?></option>
+                <option value="<?php echo $classe_3 ?>"><?php echo $classe_3 ?></option>
+                <option value="<?php echo $classe_4 ?>"><?php echo $classe_4 ?></option>
+                <option value="<?php echo $classe_5 ?>"><?php echo $classe_5 ?></option>
+            </select>
+        </div>
+
         </div>
     </fieldset>
     <fieldset>

@@ -12,10 +12,8 @@
 <h3>Merci de compléter le formulaire en cas d'absence de votre enfant</h3>
    <div><?php include ("excuse.php"); ?></div>
     <?php
-    if(isset($_POST["excuse"])== true){
+    if(isset($_POST["excuse"]) && !empty($_POST["name"]) && isset($_POST["classe"])){
         include ("cible.php");
-    }else {
-
     }
     ?>
 </body>
