@@ -58,23 +58,23 @@ shuffle($other);
 
 ?>
 
-<form method="post" >
+<form id ="form" class="container" method="post" >
 
-    <fieldset>
+    <fieldset class="formulaire">
         <legend>Informations sur l'enfant</legend>
-        <div>
+        <div class="input">
            <!-- <form action=""> -->
            <label for="GET-name">prénom et nom de l'enfant</label>
            <input type="text" id="GET-name" name="name">
            
         </div>
-        <div>
+        <div class="input">
             <label for="get-genre">sexe</label>
             <select name="genre" id="get-genre">
                 <option value="<?php echo $male?>">H</option>
                 <option value="<?php echo $female?>">F</option>
             </select>
-        <div>
+        <div class="input">
             <label for="get-professeur">Classe de</label>
             <select name="classe" id="get-professeur">
                 <option value="<?php echo $classe_1 ?>"><?php echo $classe_1 ?></option>
@@ -87,10 +87,10 @@ shuffle($other);
 
         </div>
     </fieldset>
-    <fieldset>
+    <fieldset class="formulaire">
         <legend>Veuillez choisir un motif d'absence</legend>
 
-        <div>
+        <div class="input">
             <input type="radio" id="maladie" name="excuse" value="<?php echo $maladie[0]?>" checked= "checked" />
             <label for="maladie" >maladie</label>
              <!-- <div>
@@ -103,24 +103,26 @@ shuffle($other);
             </div> -->
         </div>
 
-        <div>
+        <div class="input">
             <input type="radio" id="deces" name="excuse" value ="<?php echo $deces[0]?>" />
             <label for="deces">déces</label>
         </div>
 
-        <div>
+        <div class="input">
             <input type="radio" id="activity" name="excuse" value = "<?php echo $activity[0]?>" />
             <label for="activity">Activité extra-scolaire</label>
         </div>
-        <div>
+        <div class="input">
             <input type="radio" id="other" name="excuse" value = "<?php echo $other[0]?>"/>
             <label for="other">Autres excuses bidon</label>
             
         </div>
-        <div>
+        <div class="input">
             <label for="GET-excuse">Une autre excuse?</label>
             <input type="text" id="GET-excuse" name="reading-excuse">
         </div>
+        <input id ="button-valider" class=" button" type="button" value="valider">
     </fieldset>
-    <input type="submit" value ="valider">
+    
 </form>
+<!-- <button id ="button-valider"class="button" >valider</button>  -->

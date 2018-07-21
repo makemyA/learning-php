@@ -1,17 +1,192 @@
-p {
-    background-color: rgb(9, 9, 61);
-    color:white;
-    width: 80%;
-    margin: auto;
-    text-align: center;     
+.hide {
+    display:none;
 }
+body {
+    min-width: 300px;
+    width: 95%;
+    margin: 0 auto;
+}
+/* #container-2 {
+
+    border: 1px dotted rgba(9, 9, 61,0.9);
+    margin: 2.5em auto 1em auto;
+    padding: 0 1em 0 1em;
+    flex: 70%; */
 h1 {
-    color: rgb(120, 120, 221);
+    color: rgba(9, 9, 61,0.9);
+    font-size: 1.5em;
+    letter-spacing: 0.3em;    
+}
+h2,h3{
+    width: 90%;
+    margin: 0 auto 1em auto;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 0.2em;    
+}
+#page1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    letter-spacing: 0.1em;
+    
+}
+#container-1 {
+    flex: 100%;
+    
+}
+#container-2 {
+    flex:1;
+    background-color:white;
+    border:  rgba(9, 9, 61,0.9);
+    min-height: 400px;
+    color:white;
+    position: relative;
+    animation-name: container-transition;
+    animation-duration: 1s;
+    animation-iteration-count:1;
+    animation-delay:0;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;    
+   
+}
+
+#background-image {
+    background-image: url("images.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 600px;
+    margin: 1em 3em;
+  /*   min-width: 400px; */
 }
 p.excuse {
 font-size: 1.5em;
+max-width: 50%;
+margin: 1em auto 1em auto;
+padding: 0.5em 3em;
+background-color: white;
+color: coral;
+overflow-wrap: break-word; 
 }
-span.name{
+.name{
     font-size: 1.3em;
 
+}
+#form {
+    border: transparent;
+    /* flex: 40%; */ 
+
+}
+#form-answer {
+flex: 100%;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid rgba(9, 9, 61,0.3);
+    margin: 1em;
+}
+.box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0.5em auto 0.5em auto;
+    color:black;
+    
+   /*  width: 80%;
+    margin: auto; */
+}
+#box1 {
+    flex:60%;
+   
+}
+#box2 {
+    flex: 60%;
+}
+.box p {
+    flex: 100%;
+}
+
+
+.formulaire {
+    margin: 1em auto 1em auto;
+    flex:100%;
+    color: rgba(18, 18, 145, 0.836);
+    
+  /*   margin: 1em auto 1em auto;
+    width: 50%; */
+}
+.input {
+    color:black;
+    font-size: 1em;
+    margin: 1em 0.5em ;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+strong {
+font-size: 1.3em;
+font-weight: 700;
+color: rgb(9, 9, 61);
+
+}
+.container-button {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+   
+    
+}
+@media only all and (min-width: 600px) {
+/* 
+    #form {
+        border: transparent;
+        flex: 40%; */
+    /*     width: 45%;
+        margin: 0 auto 0 auto; */
+    
+   /*  }
+    #form-answer {
+    flex: 60%;
+    } */
+body {
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto 0 auto;
+}
+#container-1 {
+    flex: 1;
+}  
+#container-2 {
+    flex:60%;
+    margin-top:2em;
+}  
+/* .container {
+    flex:100%;
+}
+
+
+ #container-2 {
+    flex:1;
+} */
 }
