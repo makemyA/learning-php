@@ -60,7 +60,7 @@ h2,h3{
 }
 
 #background-image {
-    background-image: url("../img/images.jpg");
+    background-image: url('../img/images.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 600px;
