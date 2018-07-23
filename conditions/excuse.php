@@ -64,25 +64,33 @@ shuffle($other);
         <legend>Informations sur l'enfant</legend>
         <div class="input">
            <!-- <form action=""> -->
-           <label for="GET-name">prénom et nom de l'enfant</label>
-           <input type="text" id="GET-name" name="name">
-           
+           <label for="GET-name">Je m'appelle</label>
+           <input type="text" id="GET-name" name="name" required pattern="[a-zA-Z]+\ [a-zA-Z]{3,50}" placeholder="prénom + NOM" autofocus>
+
         </div>
         <div class="input">
-            <label for="get-genre">sexe</label>
-            <select name="genre" id="get-genre">
-                <option value="<?php echo $male?>">H</option>
-                <option value="<?php echo $female?>">F</option>
-            </select>
+            <label for="get-genre">Je suis un(e)</label>
+            <input list ="genre" type="text" name ="genre" id="get-genre" required>
+            <datalist id="genre">
+                <option value="garçon"></option>
+                <option value="fille"></option>
+            </datalist> 
+             
+            <!-- <select name="genre" id="get-genre" required>
+                <option></option>
+                <option value="<?php echo $male?>">Garçon</option>
+                <option value="<?php echo $female?>">Fille</option>
+            </select> -->
         <div class="input">
-            <label for="get-professeur">Classe de</label>
-            <select name="classe" id="get-professeur">
-                <option value="<?php echo $classe_1 ?>"><?php echo $classe_1 ?></option>
-                <option value="<?php echo $classe_2 ?>"><?php echo $classe_2 ?></option>
-                <option value="<?php echo $classe_3 ?>"><?php echo $classe_3 ?></option>
-                <option value="<?php echo $classe_4 ?>"><?php echo $classe_4 ?></option>
-                <option value="<?php echo $classe_5 ?>"><?php echo $classe_5 ?></option>
-            </select>
+            <label for="get-professeur">Je suis dans la classe de</label>
+            <input list="classe"type="text" name="classe" id="get-professeur" required>
+            <datalist id="classe">
+                <option value="<?php echo $classe_1 ?>"></option>
+                <option value="<?php echo $classe_2 ?>"></option>
+                <option value="<?php echo $classe_3 ?>"></option>
+                <option value="<?php echo $classe_4 ?>"></option>
+                <option value="<?php echo $classe_5 ?>"></option>
+            </datalist>      
         </div>
 
         </div>
@@ -91,7 +99,7 @@ shuffle($other);
         <legend>Veuillez choisir un motif d'absence</legend>
 
         <div class="input">
-            <input type="radio" id="maladie" name="excuse" value="<?php echo $maladie[0]?>" checked= "checked" />
+            <input type="radio" id="maladie" name="excuse" value="<?php echo $maladie[0]?>" required />
             <label for="maladie" >maladie</label>
              <!-- <div>
                 <select name="excuse" id="grippe">
@@ -114,15 +122,21 @@ shuffle($other);
         </div>
         <div class="input">
             <input type="radio" id="other" name="excuse" value = "<?php echo $other[0]?>"/>
-            <label for="other">Autres excuses bidon</label>
-            
+            <label for="other">Autres excuses bidon</label>  
         </div>
         <div class="input">
-            <label for="GET-excuse">Une autre excuse?</label>
-            <input type="text" id="GET-excuse" name="reading-excuse">
+            <input type="radio" id="get-excuse" name="excuse"/>
+            <label for="get-excuse">Excuse personnalisée?</label>
+            <input type="text" id="excuse-perso" name="reading-excuse"placeholder="Entrez votre texte ici" >
         </div>
-        <input id ="button-valider" class=" button" type="button" value="valider">
+        
+        <div class="input">
+            <label for="get-email">Je souhaite recevoir une confirmation à cette adresse</label>
+            <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="get-email" name="mail">
+        </div>
+        <button id ="button-valider1"class="button" type="submit">valider</button>
+      <!--   <input id ="button-valider1" class=" button" type="submit"value="valider"> -->
     </fieldset>
     
 </form>
-<!-- <button id ="button-valider"class="button" >valider</button>  -->
+<!-- <button id ="button-valider1"class="button" type="submit">valider</button>  -->

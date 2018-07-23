@@ -8,7 +8,7 @@
 }
 
 #container-header-logo {
-background-image: url("images.jpg");
+background-image: url('../img//images.jpg');
 background-repeat: no-repeat;
 background-size: contain;
 background-color: white;
@@ -26,8 +26,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100px;
-min-width: 60vw;
-font-size: 1em;
+min-width: 30vw;
+width:100%;
+font-size: 1.2em;
 background-color: coral;
 margin-left: 1em;
 border: 1px solid coral;
@@ -49,7 +50,7 @@ text-align: center;
         
         } 
     #container-header-content {
-            font-size: 2em;
+            font-size: 2.3em;
         
             }     
 }

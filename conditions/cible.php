@@ -1,6 +1,15 @@
+
+
+
 <div class="container">
     <div id ="box1" class="box">
-    <p>Merci. Nous avons pris bonne note que <span class="name"><?php echo $_POST["name"]?></span> sera <?php echo $_POST["genre"]?> pour la raison suivante:</p>    
+    <p>Merci. Nous avons pris bonne note que <span class="name"><?php echo $_POST["name"]?></span> sera 
+    <?php
+    if($_POST["genre"]== "fille"){
+        echo "absente";
+    }else {
+        echo "absent";
+    }?> pour la raison suivante:</p>    
     </div>
     <div id ="box2" class ="box">
     <?php
@@ -16,9 +25,9 @@
         <p>Si vous constatez une erreur, veuillez corriger en cliquant sur le bouton <strong>retour</strong> ci-dessous.
         <p>Sinon, appuyez sur le bouton <strong>envoyer</strong></p>
     </div>
-    <div class="container-button">
+    <div id="ancre-button" class="container-button">
         <!-- <button id ="button-retour"class="button"><a href="index.php">Retour</a></button> -->
-        <button id ="button-retour"class="button">retour</button>
-        <button class="button"><a href="mailto: henrot.paul@gmail.com">envoyer</a></button>
+        <button id ="button-retour1"class="button"><a href="index.php">retour</a></button>
+        <button class="button"><a href="mailto: <?php echo $_POST["mail"]?>">envoyer</a></button>
     </div>
 </div>
