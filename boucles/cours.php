@@ -53,8 +53,4 @@ foreach($pronoms_personnels as $elem){
         default:;
 }
 }
-
-
-
-
 ?>
