@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <?php 
@@ -58,7 +59,7 @@ shuffle($other);
 
 ?>
 
-<form id ="form" class="container" method="post" >
+<form id ="form"name="form"class="container" method="post">
 
     <fieldset class="formulaire">
         <legend>Informations sur l'enfant</legend>
@@ -134,9 +135,11 @@ shuffle($other);
             <label for="get-email">Je souhaite recevoir une confirmation à cette adresse</label>
             <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="get-email" name="mail">
         </div>
-        <button id ="button-valider1"class="button" type="submit">valider</button>
+        <button type="submit" id ="button-valider1" class="button" name ="valider">Preview</button>
+        <!-- <button id ="button-valider2"class="button" name ="submit" type="submit">Submit</button> -->
       <!--   <input id ="button-valider1" class=" button" type="submit"value="valider"> -->
     </fieldset>
     
 </form>
+
 <!-- <button id ="button-valider1"class="button" type="submit">valider</button>  -->

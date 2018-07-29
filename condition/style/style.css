@@ -203,3 +203,13 @@ color: rgb(9, 9, 61);
     flex:1;
 } */
 }
+#mail-background h1{
+background-color: coral;
+color:white;
+}
+#body-mail {
+background-color: coral;
+display:flex;
+justify-content: center;
+align-items: center;
+}

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,32 +22,22 @@
 
         <div id="page1">
 
-        <div id="container-1">
-                <?php include ("excuse.php"); ?>
-        </div>
-        <div id="container-2">
-        <?php
-            if(!empty($_POST["name"])&&!empty($_POST["mail"])&&!empty($_POST["excuse"])){ 
-                include ("cible.php");
-            }else {
-                include ("background.php");
-            } 
-            ?>  
+            <div id="container-1">
+                    <?php include("excuse.php"); ?>
             </div>
+            <div id="container-2">
             <?php
-/* echo $_POST['mail'];
+            include("cible.php");
+                ?>  
+            </div>
+                
+        </div>    
+    </div>
+</body>
+</html>
 
-if(isset($_POST['mail'])&& !empty($_POST['mail'])){
-    $admin_email= "henrot.paul@gmail.com";
-    $subject_email="Gestion des absences";
-    $email=$_POST['mail'];
-    mail($email,$subject_email,include ("cible.php"),"From:".$admin_email);
-    echo 'thank you for your message';
-} */
 
-if(isset($_POST['mail'])&& !empty($_POST['mail'])){
-
-// message
+<!-- // message
 $message = '
 <html>
  <head>
@@ -73,11 +66,4 @@ $to= $_POST['mail'];
 
     mail($to, $subject, $message, implode("\r\n", $headers));
     echo 'Mail envoyé';
-}
-
-?>
-
-            <!-- <script src="script.js"></script> -->
-    </div>
-</body>
-</html>
+} -->
